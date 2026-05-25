@@ -1,0 +1,18 @@
+{
+  "name": "rustboom-extension",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Browser extension that completes the Steam → Rust+ companion login redirect for rustboom.gg.",
+  "type": "module",
+  "scripts": {
+    "build": "node build.js",
+    "build:chrome": "node build.js chrome",
+    "build:firefox": "node build.js firefox",
+    "zip:chrome": "node build.js chrome && cd dist-chrome && powershell -Command \"Compress-Archive -Path * -DestinationPath ../rustboom-extension-chrome.zip -Force\"",
+    "zip:firefox": "node build.js firefox && cd dist-firefox && powershell -Command \"Compress-Archive -Path * -DestinationPath ../rustboom-extension-firefox.zip -Force\"",
+    "clean": "node -e \"import('node:fs').then(fs => ['dist-chrome', 'dist-firefox', 'rustboom-extension-chrome.zip', 'rustboom-extension-firefox.zip'].forEach(p => fs.rmSync(p, { recursive: true, force: true })))\""
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

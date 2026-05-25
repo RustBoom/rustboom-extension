@@ -1,0 +1,25 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "transform": {
+          "queryTransform": {
+            "addOrReplaceParams": [
+              {
+                "key": "returnUrl",
+                "value": "rust-plus://rustboom-ext/callback"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "condition": {
+      "urlFilter": "||companion-rust.facepunch.com/login?",
+      "resourceTypes": ["main_frame"]
+    }
+  }
+]

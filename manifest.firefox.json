@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Rustboom Login Helper",
+  "version": "0.1.0",
+  "description": "Enables Steam login for rustboom.gg by completing the Rust+ companion redirect automatically.",
+  "permissions": [
+    "declarativeNetRequestWithHostAccess",
+    "webRequest",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://companion-rust.facepunch.com/*"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "main",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "rustboom-login@rustboom.gg",
+      "strict_min_version": "121.0"
+    }
+  }
+}

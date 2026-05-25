@@ -1,0 +1,7 @@
+node_modules/
+dist-chrome/
+dist-firefox/
+*.zip
+.DS_Store
+Thumbs.db
+*.log
