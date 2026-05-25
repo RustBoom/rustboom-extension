@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Rustboom Login Helper",
+  "name": "RustBoom Login Helper",
   "version": "0.1.0",
   "description": "Enables Steam login for rustboom.gg by completing the Rust+ companion redirect automatically.",
   "permissions": [
