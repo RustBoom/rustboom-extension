@@ -16,7 +16,7 @@ import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-const SHARED_FILES = ["background.js", "rules.json"];
+const SHARED_FILES = ["background.js", "content.js", "rules.json"];
 const TARGETS = {
   chrome: { manifest: "manifest.chrome.json", out: "dist-chrome" },
   firefox: { manifest: "manifest.firefox.json", out: "dist-firefox" },
